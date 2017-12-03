@@ -128,3 +128,25 @@ VIM中操作时，按下 CTRL+\+g 就是没作用。之前遇到过也解决了�
 
 
 
+1. 首先需要已安装ctags
+
+2. 下载tagbar插件：https://vim.sourceforge.io/scripts/script.php?script_id=3465
+
+3. 放置位置：~/.vim/plugin
+
+vim tagbar.vmb
+
+:so %
+
+
+
+nmap <silent> <F4> :TagbarToggle<CR>  
+let g:tagbar_ctags_bin = 'ctags'  
+let g:tagbar_width = 60  
+
+
+
+生成ctags 后  "ctags -R",     ctrl+] 跳转函数定义，  ctrl+t  ， ctrl + o 返回
+ctrl+鼠标右键--跳转函数定义，  ctrl +鼠标左键--返回
+
+

@@ -1,0 +1,74 @@
+
+set mouse=a
+
+"set cursorcolumn
+set cursorline
+set hls
+syntax on
+set smartindent  "自动缩进
+set nu
+set incsearch  " 逐字符高亮
+set cindent   
+set expandtab
+set tabstop=4
+set shiftwidth=4 "设置自动缩进长度为4格
+set autoindent 
+set showmatch "显示括号匹配 
+
+
+
+let g:tagbar_ctags_bin = 'ctags'  
+let g:tagbar_width = 60  
+
+
+let g:miniBufExplMapWindowNavVim = 1   
+let g:miniBufExplMapWindowNavArrows = 1   
+let g:miniBufExplMapCTabSwitchBufs = 1   
+let g:miniBufExplModSelTarget = 1  
+let g:miniBufExplMoreThanOne=0  
+
+let g:NERDTree_title="[NERDTree]"  
+let g:Tagbar_title = "[Tagbar]"
+"let g:winManagerWindowLayout="NERDTree|TagList"  
+let g:winManagerWindowLayout="NERDTree|Tagbar"  
+
+function! NERDTree_Start()  
+    exec 'NERDTree'  
+endfunction  
+
+function! NERDTree_IsValid()  
+    return 1  
+endfunction  
+
+
+function! Tagbar_Start()
+        exe 'TagbarOpen'
+endfunction
+
+function! Tagbar_IsValid()
+        return 1
+endfunction
+
+let g:tagbar_vertical = 60
+"let g:tagbar_left = 1                                "在左侧                                              
+"let g:tagbar_right = 1                                "在右侧           
+
+nmap wm :WMToggle<CR>  
+
+nmap <silent> <F4> :TagbarToggle<CR> 
+
+
+nmap <C-_>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-_>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-_>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-_>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+
+"rainbow
+let g:rainbow_active = 1
+
+
