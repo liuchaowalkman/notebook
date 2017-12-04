@@ -150,3 +150,20 @@ let g:tagbar_width = 60
 ctrl+鼠标右键--跳转函数定义，  ctrl +鼠标左键--返回
 
 
+用vim时，想高亮显示一个单词并查找的方发，将光标移动到所找单词.
+1: shift + "*"  向下查找并高亮显示
+2: shift + "#"  向上查找并高亮显示
+3: "g" + "d"    高亮显示光标所属单词，"n" 查找！
+
+
+vim如何显示多个高亮?
+对于简单的高亮，可以使用 :match 和 :hi[light] 命令。如果你打开 hlsearch
+选项，那么搜索本身可以提供一种高亮。运行 :hi
+命令，在显示的列表中选择另外一个（或多个）高亮名称，记住它们。如下图，我选择了
+ErrorMsg 和 WildMenu 两个
+
+:match ErrorMsg /evil/
+:2match WildMenu /VIM/
+
+
+
